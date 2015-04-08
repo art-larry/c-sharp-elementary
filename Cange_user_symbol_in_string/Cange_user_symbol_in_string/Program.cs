@@ -32,8 +32,10 @@ namespace Cange_user_symbol_in_string
             }
             workString = new String(chArray);
             int c = workString.LastIndexOf(Char.ToUpper(userSymbol));
-            workString = workString.Remove(c);
-
+            if (c > 0)
+            {
+                workString = workString.Remove(c);
+            }
             Console.WriteLine(workString);
         }
     }
